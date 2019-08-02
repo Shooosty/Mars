@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H4K-Xu-a7T">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="pXa-a9-Lao">
+            <objects>
+                <collectionViewController id="H4K-Xu-a7T" customClass="CollectionViewController" customModule="Mars" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rI3-ra-awB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aNw-a4-In9">
+                            <size key="itemSize" width="111" height="113"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="nic-vo-gZw" customClass="ImagesCollectionViewCell" customModule="Mars" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="111" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="111" height="113"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zKF-Xb-mRq">
+                                            <rect key="frame" x="5" y="5" width="101" height="103"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="101" id="V0M-ro-LL0"/>
+                                                <constraint firstAttribute="height" constant="103" id="bLD-xn-FYg"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="zKF-Xb-mRq" firstAttribute="top" secondItem="nic-vo-gZw" secondAttribute="top" constant="5" id="304-aj-fgd"/>
+                                    <constraint firstAttribute="bottom" secondItem="zKF-Xb-mRq" secondAttribute="bottom" constant="5" id="3W9-QT-uqt"/>
+                                    <constraint firstItem="zKF-Xb-mRq" firstAttribute="leading" secondItem="nic-vo-gZw" secondAttribute="leading" constant="5" id="H5h-E5-nXA"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKF-Xb-mRq" secondAttribute="trailing" constant="5" id="Lg7-BC-NRU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="zKF-Xb-mRq" id="BjO-tz-yh1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="H4K-Xu-a7T" id="09K-Nh-zkC"/>
+                            <outlet property="delegate" destination="H4K-Xu-a7T" id="xqM-X6-eA9"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvy-Ve-Jm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746.37681159420299" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
